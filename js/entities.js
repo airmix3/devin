@@ -387,8 +387,8 @@ class Coin {
 class Mushroom {
     constructor(x, y) {
         this.x = x;
-        this.y = y - TILE_SIZE;
-        this.targetY = y - TILE_SIZE;
+        this.y = y; // Start inside the block
+        this.targetY = y - TILE_SIZE; // Rise to one tile above
         this.width = 32;
         this.height = 32;
         this.vx = 2;

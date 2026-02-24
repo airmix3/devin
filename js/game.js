@@ -42,6 +42,7 @@ class Game {
         this.state = STATE.PLAYING;
         this.time = 400;
         this.frame = 0;
+        this.deathPauseTimer = 0;
 
         document.getElementById('start-screen').classList.add('hidden');
         document.getElementById('game-over-screen').classList.add('hidden');
@@ -57,10 +58,12 @@ class Game {
 
         this.frame++;
 
-        // Timer
-        this.time -= 1 / 60;
-        if (this.time <= 0) {
-            this.player.die();
+        // Timer (only decrement when player is alive)
+        if (!this.player.dead) {
+            this.time -= 1 / 60;
+            if (this.time <= 0) {
+                this.player.die();
+            }
         }
 
         // Update player
