@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="start-screen">
+            <h1>SUPER MARIO<br>CLONE</h1>
+            <p>Press ENTER or click START to play</p>
+            <button id="start-btn">START</button>
+            <div class="controls-info">
+                <p><strong>Controls:</strong></p>
+                <p>Arrow Keys / WASD - Move</p>
+                <p>Space / Up / W - Jump</p>
+                <p>Shift - Run</p>
+            </div>
+        </div>
+        <div id="game-over-screen" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">PLAY AGAIN</button>
+        </div>
+        <div id="win-screen" class="hidden">
+            <h1>YOU WIN!</h1>
+            <p>Score: <span id="win-score">0</span></p>
+            <button id="win-restart-btn">PLAY AGAIN</button>
+        </div>
+    </div>
+    <script src="js/constants.js"></script>
+    <script src="js/sprites.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/level.js"></script>
+    <script src="js/entities.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/hud.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
